@@ -8,9 +8,10 @@
  </div>
 
 
-    <h2 class="fw-bold mb-5 mt-4 text-center text-info">Featured Events</h2>
+    <h2 class="fw-bold mb-5 mt-3 text-center text-info">Featured Events</h2>
 
     <div class="row row-cols-1 row-cols-md-4 g-4 ">
+
 
       <% const featuredEvents = [
           {
@@ -54,7 +55,7 @@
       <% featuredEvents.forEach(event => { %>
         <div class="col">
           <a href="<%= event.link %>" class="text-decoration-none">
-           <div class="event-card d-flex flex-column align-items-center border border-info rounded-4 p-3 bg- shadow-sm h-100 text-center">
+           <div class="event-card d-flex flex-column align-items-center border border-info rounded-4 p-3 bg- shadow-sm h-55 text-center">
               <img src="<%= event.image %>" class="mb-2 rounded-circle" style="width: 60px; height: 60px; object-fit: contain;">
               <h5 class="mb-0 fw-semibold"><%= event.title %></h5>
             </div>
