@@ -1,0 +1,35 @@
+
+
+  <div class="py-5 text-center ">
+    <h1 class="fw-bold"><span class="text-danger">G</span><span class="text-warning">D</span><span class="text-success">G</span> <span class="text-primary">on Campus</span> Dr. AIT Kanpur – <span class="text-warning">Organizers</span></h1>
+  </div>
+
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+
+     <% const organizers = [
+  { name: 'Alok Singh', role: 'GDoOC Organizer', image: '/assests/img1.webp', linkedin: 'https://www.linkedin.com/in/alokai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Devanshu Jain (DJ)', role: 'CP Lead', image: '/assests/img2.webp', linkedin: 'https://www.linkedin.com/in/devanshu-jain-a2664326b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Anjali Verma', role: 'Tech Lead', image: '/assests/img3.webp', linkedin: 'https://www.linkedin.com/in/anjali-verma-2abb3a2a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Charu Awasthi', role: 'AIML | Python | DSA in C++ | Open Source Lead', image: '/assests/img4.webp', linkedin: 'https://www.linkedin.com/in/charu-awasthi-6312b6293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Piyush Sahu', role: 'Design & UI/UX Lead', image: '/assests/img5.webp', linkedin: 'https://www.linkedin.com/in/piyush-sahu-jtp?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Aryan Kumar', role: 'AI & ML Lead', image: '/assests/img6.webp', linkedin: 'https://www.linkedin.com/in/aryan-kumar-570078293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Siddharth Jaiswal', role: 'Event Management Lead', image: '/assests/img7.webp', linkedin: 'https://www.linkedin.com/in/siddharth-jaiswal-8185632b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' }
+]; %>
+
+      <% organizers.forEach(member => { %>
+     <div class="col text-center ">
+  
+    <img src="<%= member.image %>" class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+    <h5 class="fw-bold fs-3 mb-1"><%= member.name %></h5>
+    <p class="fs-5 mb-2"><%= member.role %></p>
+    <a href="<%= member.linkedin %>">
+      <i class="fab fa-linkedin me-1 fs-3"></i>
+    </a> 
+</div>
+<% }) %>
+    </div>
+  
+
+
+  

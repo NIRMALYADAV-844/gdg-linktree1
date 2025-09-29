@@ -1,0 +1,66 @@
+<div class="container py-5">
+  
+ <div class="text-center">
+      <h1 class="fw-bold">Welcome to <span class="text-danger">Google</span> <span class="text-warning">Developer</span> <span class="text-success">Group </span></span> on Campus</h1>
+      <p class="lead">Dr Ambedkar Institute of Technology for Divyangjan – Kanpur, India</p>
+      <h3 class="text-white">LEARN | CONNECT | GROW</h3>
+      <a href="/about" class="btn btn-primary rounded-pill px-4 mt-3">Learn More</a>
+ </div>
+
+
+    <h2 class="fw-bold mb-5 mt-4 text-center text-info">Featured Events</h2>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4 ">
+
+      <% const featuredEvents = [
+          {
+          title: 'Chapter Page',
+          image: '/assests/book.webp',
+          link: "https://gdg.community.dev/gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india/"
+        },
+        
+        {
+          title: 'GDG INFO SESSION: YOUR PATH TO TECH SUCCESS',
+          image: "/assests/info-session.webp",
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-gdg-info-session-your-path-to-tech-success/'
+        },
+        {
+          title: 'OPEN SOURCE MADE EASY',
+          image: '/assests/open source.png',
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-open-source-made-easy-how-to-contribute-with-gssoc/cohost-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india'
+        },
+        {
+          title: 'BUILD WITH AI',
+          image: '/assests/genai.webp',
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-build-with-ai/'
+        },
+        {
+          title: 'Tech Winter Break',
+          image: '/assests/tech winter.jpeg',
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-tech-winter-break-dr-aitd-android-development-workshop/'
+        },
+        {
+          title: 'Innovate X Coding Challenge',
+          image: '/assests/hackthon.webp',
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-innovate-x-coding-challenge/'
+        },
+        {
+          title: 'Winter of Code',
+          image: '/assests/woc.webp',
+          link: 'https://gdg.community.dev/events/details/google-gdg-on-campus-dr-ambedkar-institute-of-technology-for-handicapped-kanpur-india-presents-winter-of-code-info-session/'
+        },
+      ]; %>
+
+      <% featuredEvents.forEach(event => { %>
+        <div class="col">
+          <a href="<%= event.link %>" class="text-decoration-none">
+           <div class="event-card d-flex flex-column align-items-center border border-info rounded-4 p-3 bg- shadow-sm h-100 text-center">
+              <img src="<%= event.image %>" class="mb-2 rounded-circle" style="width: 60px; height: 60px; object-fit: contain;">
+              <h5 class="mb-0 fw-semibold"><%= event.title %></h5>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+
+    </div>
+</div>

@@ -1,0 +1,227 @@
+body {
+  background-image: url('/assests/GDG BG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white
+  
+}
+
+.lead {
+  color: white;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+header, section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, p, a {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-link {
+  color: silver;
+  margin: 0 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+footer {
+  background-color: lightgray;
+  padding: 8px;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+ 
+}
+footer a {
+  color: #4285F4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.social-links {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #4285F4;
+  border-radius: 25px;
+  color: black;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #4285F4;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    background: #4285F4;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    border-radius: 0 0 0 15px;
+    transition: right 0.3s ease;
+  }
+
+
+
+ 
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+.navbar .nav-link:hover {
+  color: white !important; 
+  transform: translateY(-2px);
+}
+
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ffd700;
+}
+
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #ddd !important;
+}
+
+body.dark-mode .navbar .nav-link.active {
+  color: #fff !important;
+  border-bottom: 2px solid #0dcaf0; 
+}
+body.dark-mode .navbar .nav-link:hover {
+  color: #0dcaf0 !important; 
+}
+
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #ddd;
+}
+body.dark-mode footer a {
+  color: #0dcaf0;
+}
+body.dark-mode footer a:hover {
+  background: #0dcaf0;
+  color: #121212;
+}
+
+body.dark-mode .social-links a {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+} 
+
+
+.event-card {
+  background: linear-gradient(135deg, #4285F4 70%, #34A853 100%);
+  color: lightgreen;                 
+  transition: all 0.3s ease;
+}
+
+body.dark-mode::before {
+  background: black; /* strong dark overlay */
+}
+
+body.dark-mode .event-card {
+  background-color: #23272b;
+  color: #f1f1f1;
+  border: 1px solid #0dcaf0;
+  box-shadow: 0 4px 16px rgba(13, 202, 240, 0.15);
+}
+
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 15px;
+    padding: 0 4px;
+  }
+  h1, h2 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 10px 2px;
+  }
+
+}
+
+
+@media (max-width: 992px) and (min-width: 577px) {
+  body {
+    font-size: 17px;
+    padding: 0 12px;
+  }
+  h1, h2 {
+    font-size: 2.5rem;
+  }
+  .container {
+    padding: 20px 8px;
+  }
+  .event-card {
+    padding: 18px 10px;
+    font-size: 1.1rem;
+  }
+  .social-links {
+    gap: 12px;
+  }
+}
+
