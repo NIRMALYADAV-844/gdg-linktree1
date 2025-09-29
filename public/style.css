@@ -269,3 +269,26 @@ body.dark-mode .event-card {
     margin-right: 6px;
   }
 }
+
+@media (max-width: 576px) {
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #darkToggle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar-toggler {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
+}
